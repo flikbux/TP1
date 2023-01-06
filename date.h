@@ -6,20 +6,21 @@
 #define TP1_DATE_H
 
 
-class date {
+class Date {
 private:
     int _jour;
     int _mois;
     int _annee;
 
 public:
-    date(int jour = 0, int mois = 0, int annee = 0);
+    Date(int jour = 01, int mois = 01, int annee = 2000);
 
     int GetJour();
     int GetMois();
     int GetAnnee();
 
-};
+    void Display();
 
+};
 
 #endif //TP1_DATE_H

@@ -2,9 +2,13 @@
 // Created by Elie on 12/12/2022.
 //
 
+
 #include "date.h"
 
-date::date(int jour, int mois, int annee) {
+#include "iostream"
+
+
+Date::Date(int jour, int mois, int annee) {
     int max_day;
     bool bissextile = 0;
 
@@ -29,7 +33,7 @@ date::date(int jour, int mois, int annee) {
             max_day = 30;
         }
 
-        else if (mois % 2 != 0) {
+        else {
             max_day = 31;
         }
 
@@ -40,14 +44,18 @@ date::date(int jour, int mois, int annee) {
     }
 }
 
-int date::GetJour() {
+int Date::GetJour() {
     return _jour;
 }
 
-int date::GetMois() {
+int Date::GetMois() {
     return _mois;
 }
 
-int date::GetAnnee() {
+int Date::GetAnnee() {
     return _annee;
+}
+
+void Date::Display() {
+    std::cout << _jour << " / " << _mois << " / " << _annee << std::endl;
 }
