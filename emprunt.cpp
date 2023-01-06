@@ -4,10 +4,11 @@
 
 #include "emprunt.h"
 
-Emprunt::Emprunt(Date date, int ISBN, std::string identifiant) {
+Emprunt::Emprunt(Date date, Livre livre, Lecteur lecteur) {
     _date = date;
-    _ISBN = ISBN;
-    _identifiant = identifiant;
+    _ISBN = livre.GetISBN();
+    _identifiant = lecteur.GetIdentifiant();
+
 }
 
 Date Emprunt::GetDate() {

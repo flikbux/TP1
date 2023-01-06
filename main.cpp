@@ -20,7 +20,7 @@ int main(){
 
     Lecteur lecteur1("LeGrandFilou", "Pi", "Ere");
 
-    Emprunt emprunt1(date1, 666, lecteur1.GetIdentifiant());
+    Emprunt emprunt1(date1, 13214, lecteur1.GetIdentifiant());
 
     std::cout << livre1.GetIdList()[0] << " | " << lecteur1.GetIdentifiant() << std::endl;
 

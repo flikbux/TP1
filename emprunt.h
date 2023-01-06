@@ -6,6 +6,8 @@
 #define TP1_EMPRUNT_H
 
 #include "date.h"
+#include "livre.h"
+#include "lecteur.h"
 
 #include "iostream"
 #include "string"
@@ -17,7 +19,7 @@ private:
     std::string _identifiant;
 
 public:
-    Emprunt(Date date, int ISBN, std::string identifiant);
+    Emprunt(Date date, Livre livre, Lecteur lecteur);
 
     Date GetDate();
     int GetISBN();
