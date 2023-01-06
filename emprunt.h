@@ -19,7 +19,7 @@ private:
     std::string _identifiant;
 
 public:
-    Emprunt(Date date, Livre livre, Lecteur lecteur);
+    Emprunt(Date date, Lecteur lecteur, Livre livre);
 
     Date GetDate();
     int GetISBN();
