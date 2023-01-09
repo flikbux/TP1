@@ -18,7 +18,29 @@ std::string Lecteur::GetNom() {
     return _nom;
 }
 
-std::vector<std::string> Lecteur::GetISBNList() {
+std::string Lecteur::GetPrenom() {
+    return _prenom;
+}
+
+std::vector<int> Lecteur::GetISBNList() {
     return _ISBN_list;
 }
 
+void Lecteur::AddISBNToList(int ISBN) {
+    _ISBN_list.push_back(ISBN);
+}
+
+void Lecteur::RmISBNFromList(int ISBN) {
+    std::vector<int>::iterator
+    index = std::find(_ISBN_list.begin(), _ISBN_list.end(), ISBN);
+    _ISBN_list.erase(index);
+}
+
+void Lecteur::Emprunter(Date& date, Livre& livre) {
+    Emprunt emprunt = Emprunt(date, *this, livre);
+    _emprunt_list.push_back(emprunt);
+}
+
+void Lecteur::Restitutuer(Date& date, Livre& livre) {
+    Restitution(date, *this, livre);
+}

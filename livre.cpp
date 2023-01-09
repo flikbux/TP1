@@ -5,13 +5,14 @@
 #include "livre.h"
 #include "vector"
 
-Livre::Livre(std::string titre, std::string langue, std::string genre, Date date_livre, int ISBN, Auteur auteur) {
+Livre::Livre(std::string titre, std::string langue, std::string genre, Date date_livre, int ISBN, Auteur auteur, bool is_free) {
     _titre = titre;
     _auteur = auteur;
     _langue = langue;
     _genre = genre;
     _date_livre = date_livre;
     _ISBN = ISBN;
+    _is_free = is_free;
 }
 
 
@@ -49,4 +50,8 @@ bool Livre::GetIsFree() {
 
 void Livre::AddIdToList(std::string identifiant) {
     _id_list.push_back(identifiant);
+}
+
+void Livre::SetIsFree(bool is_free) {
+    _is_free = is_free;
 }

@@ -5,24 +5,25 @@
 #include "auteur.h"
 #include "bibliotheque.h"
 
-#include <iostream>
 
 
-int main(){
-    Date date1(12, 06, 2020);
-    Date date2(20, 07, 1969);
 
+int main() {
+    std::cout << "Programme en cour d'execution" << std::endl;
 
-    Auteur auteur1( date2, "777", "jean", "david");
+    //Creation de la Bibliotheque
+    Bibliotheque LeCreusot("Bibliotheque du Creusot", "71200 Le Creusot");
 
+    std::vector<Date> list_date;
+    std::cout << "vecteur cree" << std::endl;
 
-    Livre livre1("livre des etoile", "Francais", "Aventure", date1, 13214, auteur1);
+    for (int i = 0; i < 4; i++){
+        int jour = i + 1;
+        int mois = i + 1;
+        int annee = 2000 + i + 1;
+        list_date.push_back(Date(jour, mois, annee));
+        list_date[i].Display();
+    }
 
-    Lecteur lecteur1("LeGrandFilou", "Pi", "Ere");
-
-    Emprunt emprunt1(date1, 13214, lecteur1.GetIdentifiant());
-
-    std::cout << livre1.GetIdList()[0] << " | " << lecteur1.GetIdentifiant() << std::endl;
 
 }
-
