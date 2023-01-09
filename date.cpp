@@ -56,6 +56,18 @@ int Date::GetAnnee() {
     return _annee;
 }
 
+void Date::SetJour(int jour) {
+    _jour = jour;
+}
+
+void Date::SetMois(int mois) {
+    _mois = mois;
+}
+
+void Date::SetAnnee(int annee) {
+    _annee = annee;
+}
+
 void Date::Display() {
     std::cout << _jour << " / " << _mois << " / " << _annee << std::endl;
 }

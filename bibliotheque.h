@@ -7,18 +7,23 @@
 
 #include "livre.h"
 #include "emprunt.h"
-
-#include "vector"
-#include "string"
 #include "auteur.h"
 #include "lecteur.h"
+
+#include "algorithm"
+#include "vector"
+#include "string"
+
 
 class Bibliotheque {
 private:
     std::vector<Livre> _livre_list;
+    std::vector<int> _livre_ISBN_list;
     std::vector<Emprunt> _emprunt_list;
     std::vector<Auteur> _auteur_list;
+    std::vector<std::string> _auteur_id_list;
     std::vector<Lecteur> _lecteur_list;
+    std::vector<std::string> _lecteur_id_list;
     std::string _nom_bibliotheque;
     std::string _adress;
 
@@ -32,8 +37,10 @@ public:
     std::string GetNomBibliotheque();
     std::string GetAdress();
 
-    void AddAuteur();
-    void AddLivre();
+    void AddAuteur(Auteur auteur);
+    void AddLivre(Livre livre);
+    void AddLecteur(Lecteur lecteur);
+    void AddEmprunt(Emprunt emprunt);
 
 
 
