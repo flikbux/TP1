@@ -7,10 +7,12 @@
 
 #include "date.h"
 #include "livre.h"
-#include "lecteur.h"
 
 #include "iostream"
 #include "string"
+#include "algorithm"
+
+class Lecteur;
 
 class Emprunt {
 private:
@@ -19,12 +21,14 @@ private:
     std::string _identifiant;
 
 public:
-    Emprunt(Date date, Lecteur lecteur, Livre livre);
+    Emprunt(Date& date, Lecteur& lecteur, Livre &livre);
 
     Date GetDate();
     int GetISBN();
     std::string GetIdentifiant();
+
 };
 
+void Restitution(Date& date, Lecteur& lecteur, Livre& livre);
 
 #endif //TP1_EMPRUNT_H

@@ -25,7 +25,7 @@ private:
     bool _is_free;
 
 public:
-    Livre(std::string titre, std::string langue, std::string genre, Date date_livre, int ISBN, Auteur auteur = Auteur());
+    Livre(std::string titre, std::string langue, std::string genre, Date date_livre, int ISBN, Auteur auteur = Auteur(), bool is_free = 1);
 
     std::string GetTitre();
     std::string GetLangue();
@@ -37,8 +37,8 @@ public:
 
     void AddIdToList(std::string identifiant);
 
+    void SetIsFree(bool is_free);
     void DisplayDate();
-
 };
 
 

@@ -5,6 +5,7 @@
 #ifndef TP1_DATE_H
 #define TP1_DATE_H
 
+#include "iostream"
 
 class Date {
 private:
@@ -18,6 +19,10 @@ public:
     int GetJour();
     int GetMois();
     int GetAnnee();
+
+    void SetJour(int jour);
+    void SetMois(int mois);
+    void SetAnnee(int annee);
 
     void Display();
 
