@@ -8,7 +8,7 @@ Bibliotheque::Bibliotheque(std::string nom_biblioteque, std::string adress) {
     _nom_bibliotheque = nom_biblioteque;
     _adress = adress;
 
-    std::cout << "La bibliotheque " << _nom_bibliotheque << " a ete cree avec succe" << std::endl;
+    std::cout << "La bibliotheque " << _nom_bibliotheque << " a ete cree avec succes" << std::endl;
 }
 
 std::vector<Livre> Bibliotheque::GetLivreList() {
