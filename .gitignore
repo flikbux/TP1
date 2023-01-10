@@ -1,1 +1,8 @@
-*.exe *.gch *.obj
+# ignorer tous les fichiers en .exe
+*.exe
+
+#ignorer tous les fichiers en .gch
+*.gch
+
+#ignoreer tous les fichiers en .obj
+*.obj

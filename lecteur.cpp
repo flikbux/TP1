@@ -44,3 +44,7 @@ void Lecteur::Emprunter(Date& date, Livre& livre) {
 void Lecteur::Restitutuer(Date& date, Livre& livre) {
     Restitution(date, *this, livre);
 }
+
+std::ostream& operator<<(std::ostream os, Lecteur& lecteur){
+    os << "[M/MMe] " << lecteur.GetNom() << lecteur.GetPrenom() << ""
+}
