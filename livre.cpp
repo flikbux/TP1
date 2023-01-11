@@ -55,3 +55,13 @@ void Livre::AddIdToList(std::string identifiant) {
 void Livre::SetIsFree(bool is_free) {
     _is_free = is_free;
 }
+
+std::ostream& operator<<(std::ostream& os, Livre& livre){
+    std::string disponibilite = "N'est pas disponible";
+    if (livre.GetIsFree() == 1){
+        disponibilite = "Est disponible";
+    }
+
+    os << "Titre : " << livre.GetTitre() << std::endl << "Auteur : " << livre.GetAuteur().GetNom() << " " << livre.GetAuteur().GetPrenom() << std::endl << "Genre : " << livre.GetGenre() << std::endl << "Langue : " << livre.GetLangue() << std::endl << "Numero ISNB  : " << livre.GetISBN() << std::endl << "Disponibilite : " << disponibilite << std::endl;
+    return os;
+}

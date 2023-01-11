@@ -24,7 +24,7 @@ public:
     void SetMois(int mois);
     void SetAnnee(int annee);
 
-    void Display();
+    friend std::ostream& operator<<(std::ostream& os, Date& date);
 
 };
 

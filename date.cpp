@@ -68,6 +68,7 @@ void Date::SetAnnee(int annee) {
     _annee = annee;
 }
 
-void Date::Display() {
-    std::cout << _jour << " / " << _mois << " / " << _annee << std::endl;
+std::ostream& operator<<(std::ostream& os, Date& date){
+    os << date.GetJour() << " / " << date.GetMois() << " / " << date.GetAnnee();
+    return os;
 }

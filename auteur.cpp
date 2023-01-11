@@ -23,6 +23,12 @@ std::string Auteur::GetPrenom() {
     return _prenom;
 }
 
-Date Auteur::GetDateDeNaissance() {
+Date &Auteur::GetDateDeNaissance() {
     return _date_de_naissance;
+}
+
+std::ostream& operator<<(std::ostream& os, Auteur& auteur){
+    os << "Nom : " << auteur.GetNom() << std::endl <<  "Prenom : " << auteur.GetPrenom() << std::endl << "Date de naissance : " << auteur.GetDateDeNaissance() << std::endl << "Identifiant : " << auteur.GetIdentifiant() << std::endl;
+
+    return os;
 }

@@ -45,6 +45,8 @@ void Lecteur::Restitutuer(Date& date, Livre& livre) {
     Restitution(date, *this, livre);
 }
 
-std::ostream& operator<<(std::ostream os, Lecteur& lecteur){
-    os << "[M/MMe] " << lecteur.GetNom() << lecteur.GetPrenom() << ""
+std::ostream& operator<<(std::ostream& os, Lecteur& lecteur){
+    os << "Nom : " << lecteur.GetNom() << std::endl << "Prenom : " << lecteur.GetPrenom() << std::endl << "Identifiant : " << lecteur.GetIdentifiant() << std::endl;
+
+    return os;
 }

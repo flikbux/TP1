@@ -39,6 +39,8 @@ public:
 
     void SetIsFree(bool is_free);
     void DisplayDate();
+
+    friend std::ostream& operator<<(std::ostream& os, Livre& livre);
 };
 
 

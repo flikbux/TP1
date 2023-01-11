@@ -36,7 +36,7 @@ public:
     void Emprunter(Date& date, Livre& livre);
     void Restitutuer(Date& date, Livre& live);
 
-    void std::ostream& operator<<(std::ostream& os, Lecteur& lecteur);
+    friend std::ostream& operator<<(std::ostream& os, Lecteur& lecteur);
 };
 
 void Display_ID();

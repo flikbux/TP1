@@ -38,15 +38,14 @@ int main() {
 
             list_livre.emplace_back("titre_" + i_string, "langue_" + i_string, "genre_" + i_string, list_date[i], i, list_auteur[0]);
         }
-
         else if (i < 7){
             list_livre.emplace_back("titre_" + i_string, "langue_" + i_string, "genre_" + i_string, list_date[i], i, list_auteur[1]);
         }
-
         else{
             list_livre.emplace_back("titre_" + i_string, "langue_" + i_string, "genre_" + i_string, list_date[i], i, list_auteur[2]);
         }
-        std::cout << list_livre[i].GetTitre() << " " << list_livre[i].GetAuteur().GetNom() << std::endl;
     }
+
+    std::cout << list_auteur[1] << std::endl;
 
 }

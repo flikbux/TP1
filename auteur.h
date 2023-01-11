@@ -23,7 +23,9 @@ public:
     std::string GetIdentifiant();
     std::string GetNom();
     std::string GetPrenom();
-    Date GetDateDeNaissance();
+    Date &GetDateDeNaissance();
+
+    friend std::ostream& operator<<(std::ostream& os, Auteur& auteur);
 };
 
 
