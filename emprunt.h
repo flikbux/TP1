@@ -29,6 +29,6 @@ public:
 
 };
 
-void Restitution(Date& date, Lecteur& lecteur, Livre& livre);
+void Restitution(Lecteur& lecteur, Livre& livre);
 
 #endif //TP1_EMPRUNT_H

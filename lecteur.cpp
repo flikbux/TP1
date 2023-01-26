@@ -41,8 +41,8 @@ void Lecteur::Emprunter(Date& date, Livre& livre) {
     _emprunt_list.push_back(emprunt);
 }
 
-void Lecteur::Restitutuer(Date& date, Livre& livre) {
-    Restitution(date, *this, livre);
+void Lecteur::Restitutuer(Livre& livre) {
+    Restitution(*this, livre);
 }
 
 std::ostream& operator<<(std::ostream& os, Lecteur& lecteur){

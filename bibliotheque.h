@@ -37,10 +37,9 @@ public:
     std::string GetNomBibliotheque();
     std::string GetAdress();
 
-    void AddAuteur(Auteur auteur);
-    void AddLivre(Livre livre);
-    void AddLecteur(Lecteur lecteur);
-    void AddEmprunt(Emprunt emprunt);
+    void AddAuteur(Auteur& auteur);
+    void AddLivre(Livre& livre);
+    void AddLecteur(Lecteur& lecteur);
 
 
 

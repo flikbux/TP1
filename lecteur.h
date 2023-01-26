@@ -34,7 +34,7 @@ public:
     void AddISBNToList(int ISBN);
     void RmISBNFromList(int ISBN);
     void Emprunter(Date& date, Livre& livre);
-    void Restitutuer(Date& date, Livre& live);
+    void Restitutuer(Livre& live);
 
     friend std::ostream& operator<<(std::ostream& os, Lecteur& lecteur);
 };

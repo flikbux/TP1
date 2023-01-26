@@ -6,7 +6,6 @@
 #include "lecteur.h"
 
 Emprunt::Emprunt(Date& date, Lecteur& lecteur, Livre& livre) {
-    std::cout << std::to_string(livre.GetIsFree()) << std::endl;
     if (livre.GetIsFree() == 1){
         _date = date;
         _ISBN = livre.GetISBN();
@@ -36,12 +35,11 @@ std::string Emprunt::GetIdentifiant() {
     return _identifiant;
 }
 
-void Restitution(Date& date, Lecteur& lecteur, Livre& livre) {
+void Restitution(Lecteur& lecteur, Livre& livre) {
     std::vector<int>::iterator check;
     check = std::find(lecteur.GetISBNList().begin(), lecteur.GetISBNList().end(), livre.GetISBN());
 
-    //on ajoute un teste unitaire car si selement 1 element dans la list et que c'est celui que l'on cherche find renvera le dernier index qui est egalement le premier
-    if (check != lecteur.GetISBNList().end() || lecteur.GetISBNList()[0] == livre.GetISBN()){
+    if (check != lecteur.GetISBNList().end()){
         livre.SetIsFree(1);
         lecteur.RmISBNFromList(livre.GetISBN());
         std::cout << "[M / Mme] " << lecteur.GetNom() << " " << lecteur.GetPrenom() << " a rendu le livre : " << livre.GetTitre() << " avec succes." << std::endl;

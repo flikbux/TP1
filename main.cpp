@@ -1,9 +1,13 @@
+//
+// Created by Elie on 26/01/2023.
+//
 #include "date.h"
 #include "livre.h"
 #include "lecteur.h"
 #include "auteur.h"
 #include "bibliotheque.h"
 
+//g++ a compiler : g++ .\main.cpp .\auteur.cpp .\auteur.h .\date.cpp .\date.h .\emprunt.cpp .\emprunt.h .\lecteur.cpp .\lecteur.h .\livre.cpp .\livre.h .\bibliotheque.cpp .\bibliotheque.h
 
 
 
@@ -46,6 +50,21 @@ int main() {
         }
     }
 
-    std::cout << list_auteur[1] << std::endl;
+
+    //On fait un emprunt
+    list_lecteur[1].Emprunter(list_date[1], list_livre[5]);
+
+    //On essaie d'emprunter le meme livre avec un autre lecteur
+    list_lecteur[2].Emprunter(list_date[2], list_livre[5]);
+
+    //On essaie de rendre le livre avec le mauvais lecteur
+    list_lecteur[2].Restitutuer(list_livre[5]);
+
+    //On restitue le livre avec le bon lecteur
+    list_lecteur[1].Restitutuer(list_livre[5]);
+
+    //On emprunte le livre qui est desormais disponible avec un autre lecteur
+    list_lecteur[2].Emprunter(list_date[3], list_livre[5]);
+
 
 }
