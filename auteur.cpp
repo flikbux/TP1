@@ -32,3 +32,7 @@ std::ostream& operator<<(std::ostream& os, Auteur& auteur){
 
     return os;
 }
+
+std::vector<Livre> Auteur::GetLivres() {
+    return 0;
+}

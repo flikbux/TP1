@@ -50,3 +50,4 @@ std::ostream& operator<<(std::ostream& os, Lecteur& lecteur){
 
     return os;
 }
+

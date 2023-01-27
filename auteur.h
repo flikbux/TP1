@@ -6,9 +6,11 @@
 #define TP1_AUTEUR_H
 
 #include "date.h"
+#include "livre.h"
 
 #include "iostream"
 #include "string"
+#include "vector"
 
 class Auteur {
 private:
@@ -24,6 +26,8 @@ public:
     std::string GetNom();
     std::string GetPrenom();
     Date &GetDateDeNaissance();
+
+
 
     friend std::ostream& operator<<(std::ostream& os, Auteur& auteur);
 };
